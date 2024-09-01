@@ -16,7 +16,7 @@ The PIR sensor is interfaced with Atmega324p microcontroller to detect the motio
 
 ```
       1_MCAL
-           -> UART
+          -> UART
       2_HAL
           -> LCD_Drive
 ```
