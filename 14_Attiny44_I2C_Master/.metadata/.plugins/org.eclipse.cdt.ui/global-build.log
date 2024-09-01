@@ -1,0 +1,26 @@
+18:03:09 **** Build of configuration Default for project Attiny44_I2C_Master ****
+make all 
+avr-gcc -std=gnu99 -Wall -Os -DF_CPU=1000000 -mmcu=attiny44 -I ./inc/  -o main.o ./src/*.c
+./src/main.c: In function ‘main’:
+./src/main.c:33:43: warning: array subscript has type ‘char’ [-Wchar-subscripts]
+     USI_I2C_Master_Write_Byte (segment_val[counter]);
+                                           ^
+avr-gcc -std=gnu99 -Wall -Os -DF_CPU=1000000 -mmcu=attiny44 -I ./inc/ -o main.elf ./src/*.c
+./src/main.c: In function ‘main’:
+./src/main.c:33:43: warning: array subscript has type ‘char’ [-Wchar-subscripts]
+     USI_I2C_Master_Write_Byte (segment_val[counter]);
+                                           ^
+avr-objcopy -j .text -j .data -O ihex main.elf main.hex
+avr-size --format=avr --mcu=attiny44 main.elf
+AVR Memory Usage
+----------------
+Device: attiny44
+
+Program:     364 bytes (8.9% Full)
+(.text + .data + .bootloader)
+
+Data:         16 bytes (6.2% Full)
+(.data + .bss + .noinit)
+
+
+Succes compiled
