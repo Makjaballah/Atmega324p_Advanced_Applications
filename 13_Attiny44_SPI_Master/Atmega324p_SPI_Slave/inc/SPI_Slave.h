@@ -1,0 +1,39 @@
+/*
+ * File_Name       :   SPI_Slave.h
+ * Author          :   Mohamed Akram JABALLAH
+*/
+
+
+
+
+#ifndef SPI_SLAVE_H_
+#define SPI_SLAVE_H_
+
+
+#include <avr/io.h>
+#include <util/delay.h>
+
+#define MOSI                       DDB5
+#define MISO                       DDB6
+#define SCK                        DDB7
+#define SS                         DDB4
+#define SS_Enable                  PORTB  &= ~(1 << PORTB4)
+#define SS_Disable                 PORTB  |=  (1 << PORTB4)
+
+
+
+void SPI_Slave_Init (void);
+void SPI_Slave_Transmit (char SPI_Data);
+char SPI_Slave_Receive (void);
+
+
+
+
+#endif 
+
+
+
+
+
+
+
