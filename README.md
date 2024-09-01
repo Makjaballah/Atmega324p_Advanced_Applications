@@ -8,5 +8,7 @@ The following sub-headings are given for each project where possible:
      1- Project Title
      2- Description
      3- Aim
-     4- Circuit Diagram
+     4- Hardware Requirements
+     5- Drivers
+     6- The main circuit diagram
 ```
